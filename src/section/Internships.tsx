@@ -145,11 +145,8 @@ const Internships = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="mb-12"
                 >
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="h-0.5 w-8 bg-[#3660a3]"></div>
-                        <h3 className="text-2xl font-bold text-[#1b335f]">A. Types of Internships</h3>
-                    </div>
-                    <p className="text-gray-600 max-w-3xl">
+
+                    <p className="text-gray-300 max-w-3xl">
                         We offer three different internship formats to accommodate diverse needs and learning preferences.
                     </p>
                 </motion.div>

@@ -18,9 +18,11 @@ import {
     BookOpen,
     Users
 } from 'lucide-react';
+import { useRouter } from '@bprogress/next/app';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const router = useRouter();
 
     // Animation variants
     const containerVariants = {
@@ -235,6 +237,7 @@ const Footer = () => {
                                 className="w-full bg-[#3660a3] hover:bg-[#3660a3]/80 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
+                                onClick={() => router.push('/contact-us')}
                             >
                                 Subscribe Now
                             </motion.button>

@@ -1,6 +1,5 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
+'use client';
+import React from 'react'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -8,47 +7,46 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+} from "@/components/ui/navigation-menu"
+import Link from 'next/link';
+import Image from 'next/image';
 
-const Navbar = () => {
-    const navigationItems = [
-        {
-            title: "Home",
-            href: "/",
-            description: "",
-            imgUrl: "/logo/main-logo.png",
-        },
+
+
+import RightSideNav from '@/components/rightSide-nav';
+import { Button } from '@/components/ui/button';
+import { useRouter } from '@bprogress/next/app';
+
+
+
+
+export default async function Navbar() {
+    const router = useRouter();
+    const menus = [
 
         {
             title: "Courses",
-            description: "Managing a small business today is already tough.",
-            items: [
+
+            navMenu: [
                 {
                     title: "Web Development",
                     href: "/courses/web-development",
                 },
                 {
-                    title: "E-commerce Developer Bootcamp",
-                    href: "/courses/ecommerce-developer-bootcamp",
+                    title: "Data Science",
+                    href: "/courses/data-science",
                 },
                 {
-                    title: "Machine Learning",
-                    href: "/courses/machine-learning",
+                    title: "Digital Marketing",
+                    href: "/courses/digital-marketing",
                 },
-                {
-                    title: "Cyber Security",
-                    href: "/courses/cyber-security",
-                },
+
             ],
         },
         {
             title: "Placement Hub",
             description: "Get hired by top companies.",
-            items: [
+            navMenu: [
                 {
                     title: "Job Listings",
                     href: "/placement/job-listings",
@@ -62,125 +60,46 @@ const Navbar = () => {
                     href: "/placement/interview-prep",
                 },
             ],
-        }
-    ];
-
-    const [isOpen, setOpen] = useState(false);
+        },
+    ]
     return (
-        <header className="w-full z-40 fixed top-0 left-0 bg-background">
-            <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
-                <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
-                    <NavigationMenu className="flex justify-start items-start">
-                        <NavigationMenuList className="flex justify-start gap-4 flex-row text-lg">
-                            {navigationItems.map((item) => (
-                                <NavigationMenuItem key={item.title}>
-                                    {item.href ? (
-                                        <>
-                                            <NavigationMenuLink href={item.href}>
-                                                <div className="relative">
-                                                    <Image
-                                                        src={item.imgUrl}
-                                                        alt="Logo"
-                                                        width={20}
-                                                        height={20}
-                                                        className="object-cover"
-                                                        priority
-                                                    />
-                                                </div>
-                                            </NavigationMenuLink>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <NavigationMenuTrigger className="font-medium text-lg bg-primary text-white">
-                                                {item.title}
-                                            </NavigationMenuTrigger>
-                                            <NavigationMenuContent className="!w-[450px] p-4">
-                                                <div className="flex flex-col lg:grid grid-cols-2 gap-4">
-                                                    <div className="flex flex-col h-full justify-between">
-                                                        <div className="flex flex-col">
-                                                            <p className="text-base">{item.title}</p>
-                                                            <p className="text-muted-foreground text-sm">
-                                                                {item.description}
-                                                            </p>
-                                                        </div>
-                                                        <Button size="sm" className="mt-10">
-                                                            Book a call today
-                                                        </Button>
-                                                    </div>
-                                                    <div className="flex flex-col text-sm h-full justify-end">
-                                                        {item.items?.map((subItem) => (
-                                                            <NavigationMenuLink
-                                                                href={subItem.href}
-                                                                key={subItem.title}
-                                                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
-                                                            >
-                                                                <span>{subItem.title}</span>
-                                                                <MoveRight className="w-4 h-4 text-muted-foreground" />
-                                                            </NavigationMenuLink>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </NavigationMenuContent>
-                                        </>
-                                    )}
-                                </NavigationMenuItem>
-                            ))}
+        <div className='sticky top-0 z-40 w-full shadow-lg bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-between items-center  py-2 px-4 md:px-8 lg:px-12'>
+            <ul className='hidden md:flex gap-4 justify-start items-center'>
+                <Link href="/" className='block relative '>
+                    <Image src='/logo/name-logo.png' alt='logo' height={70} width={70} className='object-contain' />
+                </Link>
+                {menus.map((menu, index) => (
+                    <NavigationMenu key={index}>
+                        <NavigationMenuList>
+                            <NavigationMenuItem>
+                                <NavigationMenuTrigger className='text-start'>{menu.title}</NavigationMenuTrigger>
+                                <NavigationMenuContent className={`min-w-48 grid ${menu.navMenu.length > 5 ? 'grid-cols-2 min-w-80' : 'grid-cols-1'}`}>
+                                    {menu.navMenu.map((item) => (
+                                        <NavigationMenuLink className='block w-full px-4 py-2 hover:bg-muted' key={item.title} href={item.href}>{item.title}</NavigationMenuLink>
+                                    ))}
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
-                </div>
-                <div className="flex lg:justify-center">
-                    <p className="font-semibold"></p>
-                </div>
-                <div className="flex justify-end w-full gap-4 text-lg">
-                    <Button variant="ghost" className="hidden md:inline text-lg">
-                        Book a demo
-                    </Button>
-                    <div className="border-r hidden md:inline"></div>
-                    <Button variant="outline">Sign in</Button>
-                    <Button>Get started</Button>
-                </div>
-                <div className="flex w-12 shrink lg:hidden items-end justify-end">
-                    <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-                        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                    </Button>
-                    {isOpen && (
-                        <div className="absolute top-20 border-t flex flex-col w-full right-0 bg-background shadow-lg py-4 container gap-8">
-                            {navigationItems.map((item) => (
-                                <div key={item.title}>
-                                    <div className="flex flex-col gap-2">
-                                        {item.href ? (
-                                            <Link
-                                                href={item.href}
-                                                className="flex justify-between items-center"
-                                            >
-                                                <span className="text-lg">{item.title}</span>
-                                                <MoveRight className="w-4 h-4 stroke-1 text-muted-foreground" />
-                                            </Link>
-                                        ) : (
-                                            <p className="text-lg">{item.title}</p>
-                                        )}
-                                        {item.items &&
-                                            item.items.map((subItem) => (
-                                                <Link
-                                                    key={subItem.title}
-                                                    href={subItem.href}
-                                                    className="flex justify-between items-center bg-primary"
-                                                >
-                                                    <span className="text-muted-foreground">
-                                                        {subItem.title}
-                                                    </span>
-                                                    <MoveRight className="w-4 h-4 stroke-1" />
-                                                </Link>
-                                            ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </div>
-        </header>
-    );
-};
+                ))}
+            </ul>
+            {/* THIS IS MOBILE VIEW NAV SACTION */}
+            <ul className='hidden md:flex gap-4 items-center'>
+                <Button variant="outline" onClick={() => router.push('/contact-us')}>Join as a Company</Button>
+                <Button onClick={() => router.push('/contact-us')}>Join as a Student</Button>
+            </ul>
 
-export default Navbar;
+            <ul className='flex w-full gap-4 items-center justify-between px-4   md:hidden'>
+                {/* <MobileMenu menus={menus} /> */}
+                <Link href="/" className='block relative overflow-hidden'>
+                    <Image src='/logo/name-logo.png' alt='logo' height={50} width={50} className='object-contain' />
+                </Link>
+                <ul className='flex gap-4 items-center'>
+                    <Button variant="outline" onClick={() => router.push('/contact-us')}>Join as a Company</Button>
+                    <Button onClick={() => router.push('/contact-us')}>Join as a Student</Button>
+                </ul>
+                <RightSideNav menus={menus} />
+            </ul>
+        </div>
+    )
+}

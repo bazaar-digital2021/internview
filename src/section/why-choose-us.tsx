@@ -199,40 +199,33 @@ const WhyChooseUs = () => {
                                 transition={{ delay: 0.8, duration: 0.6 }}
                             >
                                 <motion.h1
-                                    className='text-4xl text-[#1b335f] font-bold text-center relative'
-                                    whileHover={{ scale: 1.02 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                    className='text-4xl font-extrabold text-center relative'
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                 >
-                                    <span className="relative">
-                                        Internship with Placement Opportunity
+                                    <span className="relative inline-block px-2 py-1">
+                                        <span className="relative z-10 bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent">
+                                            Internship with Placement Opportunity
+                                        </span>
                                         <motion.span
-                                            className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#1b335f] to-[#3660a3] rounded-full"
+                                            className="absolute inset-0 bg-gradient-to-r from-pink-200 to-indigo-200 opacity-30 rounded-lg -z-10"
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            animate={{ opacity: 0.3, scale: 1 }}
+                                            transition={{ delay: 0.5, duration: 0.8 }}
+                                        />
+                                        <motion.span
+                                            className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-[#1b335f] to-[#3660a3] rounded-full"
                                             initial={{ width: "0%", left: "50%" }}
                                             animate={{ width: "100%", left: "0%" }}
                                             transition={{ delay: 1.5, duration: 0.8 }}
                                         />
+                                        <motion.span
+                                            className="absolute -top-1 -right-1 -left-1 -bottom-1 border-2 border-dashed border-[#3660a3]/30 rounded-lg"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ delay: 1, duration: 0.5 }}
+                                        />
                                     </span>
-
-                                    {/* Decorative elements */}
-                                    <motion.div
-                                        className="absolute -top-10 -left-10 w-20 h-20 opacity-10"
-                                        animate={{ opacity: [0.1, 0.2, 0.1], rotate: [0, 15, 0] }}
-                                        transition={{ duration: 8, repeat: Infinity }}
-                                    >
-                                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 100C20 55.8172 55.8172 20 100 20C144.183 20 180 55.8172 180 100C180 144.183 144.183 180 100 180C55.8172 180 20 144.183 20 100Z" stroke="#3660a3" strokeWidth="12" />
-                                        </svg>
-                                    </motion.div>
-
-                                    <motion.div
-                                        className="absolute -right-14 bottom-0 w-12 h-12 opacity-10"
-                                        animate={{ opacity: [0.1, 0.2, 0.1], rotate: [0, -10, 0] }}
-                                        transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-                                    >
-                                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M40 100L100 40L160 100L100 160L40 100Z" stroke="#1b335f" strokeWidth="12" />
-                                        </svg>
-                                    </motion.div>
                                 </motion.h1>
                             </motion.div>
                         </div>

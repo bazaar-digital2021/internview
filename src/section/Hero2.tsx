@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 const pacifico = Pacifico({
     subsets: ["latin"],
@@ -160,7 +161,7 @@ export default function HeroGeometric({
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/[0.3] border border-primary/[0.8] mb-8 md:mb-12"
                     >
                         <Image src="https://kokonutui.com/logo.svg" alt="Kokonut UI" width={20} height={20} />
-                        <span className="text-sm text-white/60 tracking-wide">{badge}</span>
+                        <span className="text-2xl text-white/60 tracking-wide">{badge}</span>
                     </motion.div>
 
                     <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
@@ -178,10 +179,17 @@ export default function HeroGeometric({
                         </h1>
                     </motion.div>
 
+
                     <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
                             Empowering students with real-world skills, mentorship, and expert-led training to thrive in today's job market.
                         </p>
+                    </motion.div>
+                    <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
+                        <ul className='flex gap-4 items-center justify-center'>
+                            <Button variant="outline" size='lg'>Join as a Company</Button>
+                            <Button size='lg'>Join as a Student</Button>
+                        </ul>
                     </motion.div>
                 </div>
             </div>

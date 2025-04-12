@@ -77,7 +77,7 @@ export default function CodingHub() {
                 loop: true,
             }}
             plugins={[plugins.current]}
-            className="w-full px-4 py-16 bg-primary/30 bg-opacity-30 overflow-hidden"
+            className="w-full px-4 py-16 bg-primary/60 bg-opacity-30 overflow-hidden"
         >
             <CarouselContent className='flex gap-5'>
                 {codingChallenges.map((challenge) => (

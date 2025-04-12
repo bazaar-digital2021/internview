@@ -109,7 +109,7 @@ const Internships = () => {
     ];
 
     return (
-        <section ref={ref} className="py-24 bg-gradient-to-b from-white to-[#f8faff]">
+        <section ref={ref} className="py-24 bg-gradient-to-b from-primary/60 to-secondary/30">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
@@ -169,7 +169,7 @@ const Internships = () => {
                                 y: -8,
                                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
                             }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col h-full border border-gray-100"
+                            className="bg-white/70 rounded-2xl overflow-hidden shadow-lg flex flex-col h-full border border-gray-100"
                         >
                             {/* Card Header */}
                             <div className="p-6 border-b border-gray-100">

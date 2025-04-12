@@ -92,7 +92,7 @@ const Alumni = () => {
     return (
         <section
             ref={ref}
-            className="py-16 bg-white relative overflow-hidden"
+            className="py-16 bg-gradient-to-r from-primary/60 to-secondary/30 relative overflow-hidden"
         >
             <div className="container mx-auto px-4 mb-12">
                 <motion.div

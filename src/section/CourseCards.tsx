@@ -59,7 +59,7 @@ const CourseCards = () => {
     };
 
     return (
-        <section ref={ref} className="py-20 bg-gradient-to-b from-white to-[#f8faff]">
+        <section ref={ref} className="py-10 md:py-14 bg-gradient-to-b from-primary/60 to-secondary/30 ">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -89,7 +89,7 @@ const CourseCards = () => {
                                 y: -10,
                                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
                             }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col h-full"
+                            className="bg-white/70 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col h-full"
                         >
                             {/* Image Section with Overlay */}
                             <div className="relative h-56 overflow-hidden">

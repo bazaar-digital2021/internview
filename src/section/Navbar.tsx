@@ -81,8 +81,8 @@ const Navbar = () => {
                                                     <Image
                                                         src={item.imgUrl}
                                                         alt="Logo"
-                                                        width={30}
-                                                        height={30}
+                                                        width={20}
+                                                        height={20}
                                                         className="object-cover"
                                                         priority
                                                     />

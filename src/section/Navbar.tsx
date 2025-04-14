@@ -25,40 +25,77 @@ export default async function Navbar() {
     const menus = [
 
         {
-            title: "Courses",
+            title: "Computer Science",
 
             navMenu: [
                 {
-                    title: "Web Development",
-                    href: "/courses/web-development",
+                    title: "Android Development",
+                    href: "/courses/android-development",
+                },
+                {
+                    title: "Artificial Intelligence",
+                    href: "/courses/artificial-intelligence",
+                },
+                {
+                    title: "Machine Learning",
+                    href: "/courses/machine-learning",
+                },
+                {
+                    title: "Cloud Computing- AWS",
+                    href: "/courses/cloud-computing-aws",
+                },
+                {
+                    title: "Cyber Security",
+                    href: "/courses/cyber-security",
                 },
                 {
                     title: "Data Science",
                     href: "/courses/data-science",
                 },
                 {
-                    title: "Digital Marketing",
-                    href: "/courses/digital-marketing",
+                    title: "Java",
+                    href: "/courses/java",
+                },
+                {
+                    title: "Python",
+                    href: "/courses/python",
+                },
+                {
+                    title: "Web Development",
+                    href: "/courses/web-development",
                 },
 
             ],
         },
         {
-            title: "Placement Hub",
-            description: "Get hired by top companies.",
+            title: "Management",
+
             navMenu: [
                 {
-                    title: "Job Listings",
-                    href: "/placement/job-listings",
+                    title: "Human Resources",
+                    href: "/courses/human-resources",
                 },
                 {
-                    title: "Resume Builder",
-                    href: "/placement/resume-builder",
+                    title: "Finance",
+                    href: "/courses/finance",
                 },
                 {
-                    title: "Interview Prep",
-                    href: "/placement/interview-prep",
+                    title: "Sales & Marketing",
+                    href: "/courses/sales-and-marketing",
                 },
+                {
+                    title: "Digital Marketing",
+                    href: "/courses/digital-marketing",
+                },
+                {
+                    title: "Stock Market",
+                    href: "/courses/stock-market",
+                },
+                {
+                    title: "Industrial Biotechnology",
+                    href: "/courses/industrial-biotechnology",
+                },
+
             ],
         },
     ]
@@ -73,7 +110,7 @@ export default async function Navbar() {
                         <NavigationMenuList>
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className='text-start'>{menu.title}</NavigationMenuTrigger>
-                                <NavigationMenuContent className={`min-w-48 grid ${menu.navMenu.length > 5 ? 'grid-cols-2 min-w-80' : 'grid-cols-1'}`}>
+                                <NavigationMenuContent className={`min-w-48 grid ${menu.navMenu.length > 5 ? 'grid-cols-2 min-w-96' : 'grid-cols-1'}`}>
                                     {menu.navMenu.map((item) => (
                                         <NavigationMenuLink className='block w-full px-4 py-2 hover:bg-muted' key={item.title} href={item.href}>{item.title}</NavigationMenuLink>
                                     ))}

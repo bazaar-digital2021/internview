@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background elements -->
+  <g id="background-elements">
+    <!-- Gear elements -->
+    <circle cx="150" cy="140" r="30" fill="#f0f0f0" />
+    <circle cx="150" cy="140" r="20" fill="#e0e0e0" />
+    <circle cx="650" cy="250" r="40" fill="#f0f0f0" />
+    <circle cx="650" cy="250" r="25" fill="#e0e0e0" />
+    <circle cx="450" cy="500" r="35" fill="#f0f0f0" />
+    <circle cx="450" cy="500" r="20" fill="#e0e0e0" />
+    
+    <!-- Like icon -->
+    <rect x="220" y="180" width="50" height="80" rx="10" fill="#f0f0f0" />
+    <path d="M220,230 L270,230 L270,260 Q270,270 260,270 L230,270 Q220,270 220,260 Z" fill="#e0e0e0" />
+  </g>
+
+  <!-- Growth chart -->
+  <g id="growth-chart">
+    <path d="M100,400 L700,400" stroke="#e0e0e0" stroke-width="3" />
+    <path d="M100,400 L100,200" stroke="#e0e0e0" stroke-width="3" />
+    
+    <!-- Chart line -->
+    <path d="M100,380 L200,360 L300,320 L400,300 L500,250 L600,180 L700,130" stroke="#3b82f6" stroke-width="4" fill="none" />
+    
+    <!-- Arrow -->
+    <path d="M680,130 L700,130 L700,150" stroke="#3b82f6" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- Hand illustration -->
+  <g id="hand">
+    <path d="M400,450 C450,500 550,500 600,450 C650,400 650,350 600,300 C575,275 550,275 525,300 L475,350" fill="#ff8a80" />
+    <path d="M400,450 C450,500 550,500 600,450 C650,400 650,350 600,300 C575,275 550,275 525,300 L475,350" fill="none" stroke="#e57373" stroke-width="2" />
+  </g>
+
+  <!-- Person illustration -->
+  <g id="person">
+    <!-- Body -->
+    <rect x="400" y="220" width="60" height="100" rx="10" fill="#2196f3" />
+    
+    <!-- Head -->
+    <circle cx="430" cy="190" r="30" fill="#ffccbc" />
+    
+    <!-- Hair -->
+    <path d="M410,175 C410,160 450,160 450,175 L450,195 L445,195 L445,180 L415,180 L415,195 L410,195 Z" fill="#5d4037" />
+    
+    <!-- Face -->
+    <circle cx="420" cy="185" r="3" fill="#5d4037" />
+    <circle cx="440" cy="185" r="3" fill="#5d4037" />
+    <path d="M425,200 C430,205 435,200 440,200" fill="none" stroke="#5d4037" stroke-width="2" />
+    
+    <!-- Arms -->
+    <rect x="380" y="230" width="20" height="80" rx="10" fill="#1976d2" />
+    <rect x="460" y="230" width="20" height="80" rx="10" fill="#1976d2" />
+    
+    <!-- Legs -->
+    <rect x="400" y="320" width="25" height="80" rx="10" fill="#283593" />
+    <rect x="435" y="320" width="25" height="80" rx="10" fill="#283593" />
+    
+    <!-- Briefcase -->
+    <rect x="350" y="310" width="50" height="40" rx="5" fill="#795548" />
+    <rect x="370" y="310" width="10" height="10" fill="#5d4037" />
+  </g>
+</svg> 

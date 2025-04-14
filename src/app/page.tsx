@@ -11,7 +11,6 @@ import WhyChooseUs from "@/section/why-choose-us";
 export default function Home() {
   return (
     <>
-      {/* <Hero /> */}
       <HeroGeometric />
       <WhyChooseUs />
       <CourseCards />
@@ -20,8 +19,6 @@ export default function Home() {
       <Mentors />
       <Alumni />
 
-      {/* <FindCourseForMe /> */}
-      {/* <CodingHub /> */}
     </>
   );
 }

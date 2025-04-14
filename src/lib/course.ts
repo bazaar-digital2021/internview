@@ -1,7 +1,7 @@
 export const courses = [
     {
         "title": "Data Science",
-        "description": "Unlock the power of Multidisciplinary field that combines principles from mathematics, statistics, computer science, and artificial intelligence to extract knowledge and insights from data.",
+        "description": "Unlock the power of Multidisciplinary field that combines principles from mathematics.",
         "duration": "6 months",
         "modules": 12,
         "mentor": ["Khan Shabaz", "Abhiraj Kulaar"],

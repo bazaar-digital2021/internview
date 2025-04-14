@@ -39,7 +39,7 @@ const Upskill = () => {
         {
             id: 1,
             title: "Recorded Sessions",
-            icon: <Video className="w-10 h-10 text-white" />,
+            icon: <Video className="w-6 h-6 text-white" />,
             description: "Access high-quality pre-recorded content anytime, anywhere to learn at your own pace.",
             color: "#1b335f",
             benefits: [
@@ -53,7 +53,7 @@ const Upskill = () => {
         {
             id: 2,
             title: "Live Sessions",
-            icon: <Users className="w-10 h-10 text-white" />,
+            icon: <Users className="w-6 h-6 text-white" />,
             description: "Join interactive, expert-led live sessions with real-time feedback and personalized guidance.",
             color: "#3660a3",
             benefits: [
@@ -67,7 +67,7 @@ const Upskill = () => {
     ];
 
     return (
-        <section ref={ref} className="py-24 bg-gradient-to-b from-[#f8faff] to-white overflow-hidden">
+        <section ref={ref} className="py-12 md:py-24  bg-background overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
@@ -87,8 +87,8 @@ const Upskill = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-5xl font-bold bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent mb-4">
-                        Upskill Training with Certification
+                    <h2 className="text-2xl md:text-4xl font-bold text-black mb-4 font-sans">
+                        Upskill Training with <span className='bg-gradient-to-r from-pink-500 via-primary to-[#3660a3] bg-clip-text text-transparent'>Certification</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Choose the learning format that works best for you and advance your career with industry-recognized certifications.
@@ -114,10 +114,10 @@ const Upskill = () => {
                         >
                             {/* Title Bar */}
                             <div
-                                className="p-6 relative"
+                                className="px-4 py-1 relative"
                                 style={{ backgroundColor: feature.color }}
                             >
-                                <h3 className="text-3xl font-bold text-white mb-1 flex items-center gap-3">
+                                <h3 className="text-2xl font-bold text-white mb-1 flex items-center gap-3">
                                     {feature.icon}
                                     {feature.title}
                                 </h3>
@@ -155,10 +155,10 @@ const Upskill = () => {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 flex-grow flex flex-col">
-                                <p className="text-gray-600 mb-6">{feature.description}</p>
+                            <div className="p-4 flex-grow flex flex-col">
+                                <p className="text-gray-600 mb-4">{feature.description}</p>
 
-                                <div className="mb-8 flex-grow">
+                                <div className="mb-4 flex-grow">
                                     <h4 className="font-semibold text-gray-800 mb-3">Key Benefits:</h4>
                                     <ul className="space-y-2">
                                         {feature.benefits.map((benefit, index) => (

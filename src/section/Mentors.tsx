@@ -38,25 +38,27 @@ const Mentors = () => {
     const mentors = [
         {
             id: 1,
-            name: "Dr. Sarah Johnson",
+            name: "Anand Swaroop",
             role: "Senior Data Scientist",
-            company: "Tech Innovations Inc.",
-            image: "/mentors/mentor1.jpg",
-            expertise: ["Machine Learning", "AI Applications", "Python"],
-            experience: "12+ years",
-            education: "Ph.D. Computer Science, Stanford",
-            bio: "Dr. Johnson specializes in advanced machine learning algorithms and their applications in business. She has led AI innovation at several Fortune 500 companies."
+            company: "Product Owner at Kaplan",
+            image: "/mentor/1.jpeg",
+            linkdin: 'https://www.linkedin.com/in/anand-swaroop-pm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+            expertise: ["Mentor", "AI Applications", "Python"],
+            experience: "5+ years",
+            education: "Indian Institute of Technology, Bombay",
+            bio: "Product Owner at Kaplan North America, ex-Whitehat Jr & Byju’s. Postgraduate from IIT Bombay, turned product expert. Passionate about training India’s next-gen talent through real-world product exposure."
         },
         {
             id: 2,
-            name: "Alex Rodriguez",
-            role: "Lead Full Stack Developer",
-            company: "Digital Solutions Group",
-            image: "/mentors/mentor2.jpg",
-            expertise: ["React", "Node.js", "Cloud Architecture"],
+            name: "Bal Mukund Shekhawat",
+            role: "Cyber Security Expert",
+            company: "IIM Jammu '26",
+            image: "/mentor/2.jpeg",
+            linkdin: 'https://www.linkedin.com/in/bmshacktivity/',
+            expertise: ["Cyber Security", "Incident Management", "Cloud Architecture"],
             experience: "8+ years",
-            education: "MS in Software Engineering, MIT",
-            bio: "Alex has architected enterprise-level applications for global clients. He specializes in scalable cloud solutions and modern JavaScript frameworks."
+            education: "IIT Delhi, IIM Jammu",
+            bio: "Bal Mukund is a seasoned cyber security professional with expertise in threat detection and incident response. He specializes in security architecture, penetration testing, and implementing robust security frameworks for enterprise environments."
         },
         {
             id: 3,
@@ -64,6 +66,7 @@ const Mentors = () => {
             role: "Digital Marketing Director",
             company: "Global Marketing Partners",
             image: "/mentors/mentor3.jpg",
+            linkdin: '#',
             expertise: ["Growth Strategy", "SEO/SEM", "Analytics"],
             experience: "10+ years",
             education: "MBA, Harvard Business School",
@@ -72,7 +75,7 @@ const Mentors = () => {
     ];
 
     return (
-        <section ref={ref} className="py-24 bg-gradient-to-b from-[#f8faff] to-white">
+        <section ref={ref} className="py-24 bg-background">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
@@ -92,7 +95,7 @@ const Mentors = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-5xl font-bold bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent mb-4">
+                    <h2 className="text-5xl font-bold bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent mb-4 graident-text">
                         Industry Expert Panel
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -121,12 +124,17 @@ const Mentors = () => {
                             <div className="relative h-72 overflow-hidden bg-gradient-to-r from-[#1b335f] to-[#3660a3]">
                                 <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 to-transparent"></div>
                                 <div className="w-full h-full flex items-center justify-center">
-                                    {/* Placeholder for mentor image - to be replaced manually */}
-                                    <div className="w-40 h-40 rounded-full bg-white/30 flex items-center justify-center">
-                                        <div className="text-white text-4xl font-bold">
-                                            {mentor.name.split(' ').map(n => n[0]).join('')}
+                                    {mentor.name !== "Priya Sharma" ?
+                                        <Image src={mentor.image} alt={mentor.name} fill className="object-cover object-top" />
+                                        :
+
+                                        <div className="w-40 h-40 rounded-full bg-white/30 flex items-center justify-center">
+
+                                            <div className="text-white text-4xl font-bold">
+                                                {mentor.name.split(' ').map(n => n[0]).join('')}
+                                            </div>
                                         </div>
-                                    </div>
+                                    }
                                 </div>
 
                                 {/* Name and title overlay */}
@@ -142,12 +150,12 @@ const Mentors = () => {
                                 {/* Social links */}
                                 <div className="absolute top-4 right-4 flex gap-2 z-20">
                                     <motion.a
-                                        href="#"
-                                        className="bg-white/20 p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-all"
+                                        href={mentor.linkdin}
+                                        className="bg-white/10 p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-all"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
-                                        <LinkedinIcon className="w-4 h-4 text-white" />
+                                        <LinkedinIcon className="w-4 h-4 text-primary" />
                                     </motion.a>
                                     <motion.a
                                         href="#"

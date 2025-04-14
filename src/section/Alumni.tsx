@@ -28,7 +28,7 @@ const Alumni = () => {
     return (
         <section
             ref={ref}
-            className="py-16 bg-gradient-to-r from-primary/60 to-secondary/30 relative overflow-hidden"
+            className="py-16 bg-gradient-to-r from-white to-white/90 relative overflow-hidden"
         >
             <div className="container mx-auto px-4 mb-12">
                 <motion.div
@@ -56,7 +56,7 @@ const Alumni = () => {
                                     key={`row1-${logo.id}`}
                                     className="flex-shrink-0 mx-8 h-16 w-48 relative hover:scale-105 transition-transform duration-300"
                                 >
-                                    <div className="w-full h-full flex items-center justify-center rounded bg-white border border-gray-100 shadow-sm">
+                                    <div className="w-full h-full flex items-center justify-center">
                                         <div className="relative w-full h-full">
                                             <Image
                                                 src={logo.placeholder}
@@ -77,7 +77,7 @@ const Alumni = () => {
                                     key={`row1-dup-${logo.id}`}
                                     className="flex-shrink-0 mx-8 h-16 w-48 relative hover:scale-105 transition-transform duration-300"
                                 >
-                                    <div className="w-full h-full flex items-center justify-center rounded bg-white border border-gray-100 shadow-sm">
+                                    <div className="w-full h-full flex items-center justify-center">
                                         <div className="relative w-full h-full">
                                             <Image
                                                 src={logo.placeholder}
@@ -103,7 +103,7 @@ const Alumni = () => {
                                     key={`row2-${logo.id}`}
                                     className="flex-shrink-0 mx-8 h-16 w-48 relative hover:scale-105 transition-transform duration-300"
                                 >
-                                    <div className="w-full h-full flex items-center justify-center rounded bg-white border border-gray-100 shadow-sm">
+                                    <div className="w-full h-full flex items-center justify-center m">
                                         <div className="relative w-full h-full">
                                             <Image
                                                 src={logo.placeholder}
@@ -124,7 +124,7 @@ const Alumni = () => {
                                     key={`row2-dup-${logo.id}`}
                                     className="flex-shrink-0 mx-8 h-16 w-48 relative hover:scale-105 transition-transform duration-300"
                                 >
-                                    <div className="w-full h-full flex items-center justify-center rounded bg-white border border-gray-100 shadow-sm">
+                                    <div className="w-full h-full flex items-center justify-center  ">
                                         <div className="relative w-full h-full">
                                             <Image
                                                 src={logo.placeholder}

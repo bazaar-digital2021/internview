@@ -79,7 +79,7 @@ function ElegantShape({
 }
 
 export default function HeroGeometric({
-    badge = "Intern View",
+    badge = "InternView",
     title1 = "From campus to career",
     title2 = "we bridge the gap",
 }: {
@@ -170,7 +170,7 @@ export default function HeroGeometric({
                             <br />
                             <span
                                 className={cn(
-                                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-primary ",
+                                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-white ",
                                     pacifico.className,
                                 )}
                             >

@@ -2,59 +2,11 @@
 'use client'
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 const WhyChooseUs = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, amount: 0.2 });
-
-    // Parallax effect on scroll
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    });
-
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
-    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
-    // Animation variants
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2,
-                duration: 0.5
-            }
-        }
-    };
-
-    const titleVariants = {
-        hidden: { y: -20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 10
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { scale: 0.9, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 80,
-                damping: 12
-            }
-        }
-    };
 
     const cardData = [
         {
@@ -80,166 +32,101 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section ref={ref} className="relative w-full overflow-hidden py-24">
-            {/* Background elements */}
-            <motion.div
-                className="absolute inset-0 bg-gradient-to-b from-white via-[#f8faff] to-white -z-10"
-                style={{ opacity }}
-            />
-
-            <motion.div
-                className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#3660a3]/5 blur-[60px] -z-10"
-                animate={{
-                    scale: [1, 1.05, 1],
-                    opacity: [0.2, 0.3, 0.2]
-                }}
-                transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    repeatType: 'reverse'
-                }}
-            />
-
-            <motion.div
-                className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#1b335f]/5 blur-[60px] -z-10"
-                animate={{
-                    scale: [1, 1.1, 1],
-                    opacity: [0.2, 0.4, 0.2]
-                }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    repeatType: 'reverse'
-                }}
-            />
-
-            <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                    style={{ y: y1 }}
-                >
-                    <motion.h1
-                        className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent"
-                        variants={titleVariants}
-                    >
-                        Why choose InternView?
-                    </motion.h1>
-
-                    <motion.p
-                        className="text-xl text-gray-600 text-center mb-16 max-w-4xl mx-auto"
-                        variants={titleVariants}
-                    >
+        <section ref={ref} className="w-full py-20 bg-gradient-to-b bg-background">
+            <div className="w-full max-w-7xl mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#1b335f] mb-4">
+                        Why choose <span className='gradient-text'>InternView</span>
+                    </h2>
+                    <div className="w-20 h-1 bg-[#3660a3] mx-auto mb-6 rounded-full"></div>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         Seize the future: Secure your career with InternView's cutting-edge resources and transformative learning experiences.
-                    </motion.p>
+                    </p>
+                </div>
 
-                    <div className=''>
-                        <div className="flex flex-col md:grid w-full md:grid-cols-2 gap-10 md:max-w-5xl mx-auto">
-                            {cardData.map((card, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="flex items-center gap-6 group"
-                                    variants={itemVariants}
-                                    whileHover={{ scale: 1.02, y: -5 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                >
-                                    <motion.div
-                                        className="relative w-20 h-20 bg-gradient-to-br from-[#1b335f] to-[#3660a3] rounded-2xl flex items-center justify-center shadow-lg overflow-hidden"
-                                        whileHover={{ rotate: [-2, 4, 0], scale: 1.05 }}
-                                        transition={{ duration: 0.4 }}
-                                    >
-                                        <motion.div
-                                            className="absolute inset-0 bg-white opacity-90 group-hover:opacity-80 transition-opacity"
-                                        />
-                                        <motion.div
-                                            initial={{ y: 0 }}
-                                            whileHover={{ y: [-2, 1, 0] }}
-                                            transition={{ duration: 0.4 }}
-                                        >
-                                            <Image src={card.icon} alt={card.alt} height={50} width={50} className='object-cover relative z-10' />
-                                        </motion.div>
+                <div className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto">
+                    {cardData.map((card, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex items-start gap-5 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <div className="flex-shrink-0 w-16 h-16 bg-[#f0f4ff] rounded-lg flex items-center justify-center">
+                                <Image
+                                    src={card.icon}
+                                    alt={card.alt}
+                                    height={40}
+                                    width={40}
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-[#1b335f] mb-1">
+                                    {card.title}
+                                </h3>
+                                <div className="w-12 h-0.5 bg-[#3660a3]/50 mb-2"></div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
 
-                                        <motion.div
-                                            className="absolute -bottom-10 -right-10 w-20 h-20 bg-blue-300/20 rounded-full blur-xl"
-                                            animate={{
-                                                scale: [1, 1.2, 1],
-                                                opacity: [0.2, 0.3, 0.2]
-                                            }}
-                                            transition={{
-                                                duration: 3,
-                                                delay: index * 0.5,
-                                                repeat: Infinity
-                                            }}
-                                        />
-                                    </motion.div>
+                <motion.div
+                    className="mt-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                    <motion.div
+                        className="inline-block bg-[#f0f4ff] px-8 py-6 rounded-lg border-l-4 border-[#3660a3] shadow-lg relative overflow-hidden"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        {/* Animated background pulse effect */}
+                        <motion.div
+                            className="absolute inset-0 bg-primary/10 rounded-lg"
+                            animate={{
+                                scale: [1, 1.05, 1],
+                                opacity: [0.7, 0.9, 0.7]
+                            }}
+                            transition={{
+                                repeat: Infinity,
+                                duration: 2.5,
+                                ease: "easeInOut"
+                            }}
+                        />
 
-                                    <div>
-                                        <motion.div
-                                            className="text-2xl md:text-3xl font-bold text-[#1b335f] group-hover:text-[#3660a3] transition-colors"
-                                            initial={{ opacity: 0.9 }}
-                                            whileHover={{ opacity: 1 }}
-                                        >
-                                            {card.title}
-                                            <motion.div
-                                                className="h-1 w-0 bg-gradient-to-r from-[#3660a3] to-[#1b335f] mt-1 rounded-full"
-                                                animate={{ width: isInView ? "100%" : "0%" }}
-                                                transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
-                                            />
-                                        </motion.div>
-                                    </div>
-                                </motion.div>
-                            ))}
-
+                        {/* Sparkle elements */}
+                        <div className="absolute -top-1 -right-1">
                             <motion.div
-                                className="items-center gap-6 w-full col-span-2 mt-10"
-                                variants={itemVariants}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                transition={{ delay: 0.8, duration: 0.6 }}
-                            >
-                                <motion.h1
-                                    className='text-4xl font-extrabold text-center relative'
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                >
-                                    <span className="relative inline-block px-2 py-1">
-                                        <span className="relative z-10 bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent">
-                                            Internship with Placement Opportunity
-                                        </span>
-                                        <motion.span
-                                            className="absolute inset-0 bg-gradient-to-r from-pink-200 to-indigo-200 opacity-30 rounded-lg -z-10"
-                                            initial={{ opacity: 0, scale: 0.9 }}
-                                            animate={{ opacity: 0.3, scale: 1 }}
-                                            transition={{ delay: 0.5, duration: 0.8 }}
-                                        />
-                                        <motion.span
-                                            className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-[#1b335f] to-[#3660a3] rounded-full"
-                                            initial={{ width: "0%", left: "50%" }}
-                                            animate={{ width: "100%", left: "0%" }}
-                                            transition={{ delay: 1.5, duration: 0.8 }}
-                                        />
-                                        <motion.span
-                                            className="absolute -top-1 -right-1 -left-1 -bottom-1 border-2 border-dashed border-[#3660a3]/30 rounded-lg"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ delay: 1, duration: 0.5 }}
-                                        />
-                                    </span>
-                                </motion.h1>
-                            </motion.div>
+                                className="w-6 h-6 bg-yellow-300 rounded-full"
+                                animate={{
+                                    scale: [0.8, 1.2, 0.8],
+                                    opacity: [0.6, 1, 0.6]
+                                }}
+                                transition={{ repeat: Infinity, duration: 1.5 }}
+                            />
                         </div>
-                    </div>
+                        <div className="absolute bottom-2 -left-1">
+                            <motion.div
+                                className="w-4 h-4 bg-purple-400 rounded-full"
+                                animate={{
+                                    scale: [0.7, 1.1, 0.7],
+                                    opacity: [0.5, 1, 0.5]
+                                }}
+                                transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
+                            />
+                        </div>
+
+                        <h3 className="text-2xl md:text-3xl font-bold gradient-text-2 relative z-10 flex items-center justify-center gap-3">
+                            <span className="animate-bounce inline-block">🚀</span>
+                            Internship with Placement Opportunity
+                            <span className="animate-pulse inline-block">✨</span>
+                        </h3>
+                    </motion.div>
                 </motion.div>
             </div>
-
-            {/* Animated accent lines */}
-            <motion.div
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3660a3]/20 to-transparent"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: isInView ? 1 : 0 }}
-                transition={{ duration: 1.5, delay: 0.5 }}
-            />
         </section>
     );
 };

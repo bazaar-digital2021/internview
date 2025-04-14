@@ -129,8 +129,8 @@ const Internships = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-5xl font-bold bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent mb-4">
-                        Internship Program Structure
+                    <h2 className="text-2xl md:text-4xl font-bold  mb-4 font-mono">
+                        Internship Program <span className='bg-gradient-to-r from-purple-500 via-primary to-[#3660a3] bg-clip-text text-transparent'> Structure</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Choose the internship format that aligns with your goals and circumstances.
@@ -138,18 +138,7 @@ const Internships = () => {
                     </p>
                 </motion.div>
 
-                {/* Types of Internships Section Label */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mb-12"
-                >
 
-                    <p className="text-gray-300 max-w-3xl">
-                        We offer three different internship formats to accommodate diverse needs and learning preferences.
-                    </p>
-                </motion.div>
 
                 {/* Internship Cards */}
                 <motion.div
@@ -169,17 +158,14 @@ const Internships = () => {
                             className="bg-white/70 rounded-2xl overflow-hidden shadow-lg flex flex-col h-full border border-gray-100"
                         >
                             {/* Card Header */}
-                            <div className="p-6 border-b border-gray-100">
+                            <div className="p-4 border-b border-gray-100">
                                 <div className="flex items-start justify-between mb-4">
                                     <div
                                         className={`p-3 rounded-xl ${internship.accent}`}
                                     >
                                         {internship.icon}
                                     </div>
-                                    <div className={`flex items-center gap-1 text-sm font-medium ${internship.accentText} px-3 py-1 rounded-full border ${internship.accentBorder}`}>
-                                        <GanttChartSquare className="w-4 h-4" />
-                                        <span>Type {index + 1}</span>
-                                    </div>
+
                                 </div>
                                 <h3
                                     className="text-2xl font-bold mb-2"

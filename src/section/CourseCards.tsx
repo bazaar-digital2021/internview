@@ -65,10 +65,10 @@ const CourseCards = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-12"
                 >
-                    <h2 className="text-5xl font-bold bg-gradient-to-r from-[#1b335f] to-[#3660a3] bg-clip-text text-transparent mb-4">
-                        OUR Industry Oriented Programs
+                    <h2 className="text-2xl md:text-5xl font-bold mb-4 font-mono gradient-text">
+                        Our Industry Oriented <span className=''>Programs</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Elevate your skills with our industry-recognized courses taught by expert mentors.
@@ -100,7 +100,7 @@ const CourseCards = () => {
                                     height={300}
                                     className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#1b335f]/80 to-transparent opacity-70"></div>
+                                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#1b335f]/80 to-transparent opacity-70"></div> */}
                                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
                                     {courseIcons[course.title as CourseTitle] || <GraduationCap className="w-6 h-6 text-[#3660a3]" />}
                                 </div>
@@ -113,12 +113,12 @@ const CourseCards = () => {
                             </div>
 
                             {/* Content Section */}
-                            <div className="p-6 flex flex-col flex-grow">
+                            <div className="p-4 flex flex-col flex-grow">
                                 <h3 className="text-2xl font-bold text-[#1b335f] mb-3">{course.title}</h3>
                                 <p className="text-gray-600 mb-6 flex-grow">{course.description}</p>
 
                                 {/* Course Details */}
-                                <div className="grid grid-cols-2 gap-y-4 mb-6">
+                                <div className="grid grid-cols-2 gap-y-2 mb-4">
                                     <div className="flex items-center gap-2">
                                         <Clock className="w-5 h-5 text-[#3660a3]" />
                                         <span className="text-gray-700">{course.duration}</span>

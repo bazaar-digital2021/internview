@@ -44,7 +44,7 @@ const Mentors = () => {
             image: "/mentor/1.jpeg",
             linkdin: 'https://www.linkedin.com/in/anand-swaroop-pm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
             expertise: ["Mentor", "AI Applications", "Python"],
-            experience: "5+ years",
+            experience: "8+ years",
             education: "Indian Institute of Technology, Bombay",
             bio: "Product Owner at Kaplan North America, ex-Whitehat Jr & Byju’s. Postgraduate from IIT Bombay, turned product expert. Passionate about training India’s next-gen talent through real-world product exposure."
         },
@@ -75,7 +75,9 @@ const Mentors = () => {
     ];
 
     return (
-        <section ref={ref} className="py-24 bg-background">
+        <section ref={ref} className="py-24 bg-background"
+            id='mentors'
+        >
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div

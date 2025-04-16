@@ -5,6 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
     Facebook,
     Twitter,
     Instagram,
@@ -19,6 +25,7 @@ import {
     Users
 } from 'lucide-react';
 import { useRouter } from '@bprogress/next/app';
+import { navigation } from '@/lib/navigation';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -52,11 +59,10 @@ const Footer = () => {
     // Footer links
     const quickLinks = [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "/about" },
-        { name: "Courses", href: "/courses" },
-        { name: "Internships", href: "/internships" },
-        { name: "Mentors", href: "/mentors" },
-        { name: "Contact", href: "/contact" },
+        { name: "About Us", href: "#about" },
+        { name: "Courses", href: "#courses" },
+        { name: "Internships", href: "#internships" },
+        { name: "Mentors", href: "#mentors" },
     ];
 
     const courses = [
@@ -105,18 +111,18 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-[#3660a3] mt-1 flex-shrink-0" />
-                                <p className="text-white/80 text-sm">To be Added Soon</p>
+                                <p className="text-white/80 text-sm">79/24, 2nd Floor, 13th Cross, Teacher's Colony, Jakkasandra, Koramangala Bangalore 560034.</p>
                             </div>
                             <div className="flex items-start gap-3">
                                 <Mail className="w-5 h-5 text-[#3660a3] mt-0.5 flex-shrink-0" />
                                 <a href="mailto:info@internview.com" className="text-white/80 text-sm hover:text-white transition-colors">
-                                    To be Added Soon
+                                    support@internview.in
                                 </a>
                             </div>
                             <div className="flex items-start gap-3">
                                 <Phone className="w-5 h-5 text-[#3660a3] mt-0.5 flex-shrink-0" />
-                                <a href="tel:+91-9876543210" className="text-white/80 text-sm hover:text-white transition-colors">
-                                    +91-0000000000
+                                <a href="tel:+919643212235" className="text-white/80 text-sm hover:text-white transition-colors">
+                                    +91 96432 12235
                                 </a>
                             </div>
                         </div>
@@ -176,17 +182,26 @@ const Footer = () => {
                             Our Courses
                         </h3>
                         <ul className="space-y-3">
-                            {courses.map((course, index) => (
-                                <li key={index}>
-                                    <Link
-                                        href={course.href}
-                                        className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm"
-                                    >
-                                        <span className="w-1.5 h-1.5 bg-[#3660a3] rounded-full group-hover:translate-x-1 transition-transform"></span>
-                                        {course.name}
-                                    </Link>
-                                </li>
-                            ))}
+                            <Accordion type="single" collapsible className="w-full">
+                                {navigation[0].items?.map((item, index) =>
+                                    <AccordionItem value={`item-${index}`}>
+                                        <AccordionTrigger>{item.title}</AccordionTrigger>
+                                        <AccordionContent>
+                                            <ul className='space-y-2'>
+                                                {item.items?.map((subItem, subIndex) => (
+                                                    <li key={subIndex}>
+                                                        <Link href={subItem.href || '#'} className='text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm'>
+                                                            {subItem.title}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                )}
+
+                            </Accordion>
                         </ul>
 
                         <h3 className="text-xl font-semibold mt-8 mb-6 flex items-center gap-2">
@@ -250,13 +265,10 @@ const Footer = () => {
                             </h4>
                             <ul className="space-y-2 text-white/80 text-sm">
                                 <li className="flex justify-between">
-                                    <span>Monday - Friday:</span>
-                                    <span>9:00 AM - 6:00 PM</span>
+                                    <span>Monday - Saturday:</span>
+                                    <span>10:00AM -7:00PM</span>
                                 </li>
-                                <li className="flex justify-between">
-                                    <span>Saturday:</span>
-                                    <span>9:00 AM - 1:00 PM</span>
-                                </li>
+
                                 <li className="flex justify-between">
                                     <span>Sunday:</span>
                                     <span>Closed</span>
@@ -272,7 +284,7 @@ const Footer = () => {
                 <div className="container mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-white/60 text-sm">
-                            © {currentYear} InternView. All rights reserved.
+                            © {currentYear} InternView.in All rights reserved.
                         </p>
                         <div className="flex items-center gap-6">
                             <Link href="/https://www.bazaardigital.in/" className='text-white'>Designed By Bazaar Digital</Link>

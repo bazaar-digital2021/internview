@@ -33,16 +33,16 @@ export default function CourseDetails({ course }: { course: Course }) {
                                 <p className="text-gray-700 mb-2">Certified By:</p>
                                 <div className="flex items-center">
                                     <Image
-                                        src="/ibm.png"
+                                        src="/iso.png"
                                         alt="Apple Certification"
-                                        width={40}
-                                        height={40}
+                                        width={100}
+                                        height={100}
                                         className="mr-2"
                                     />
                                 </div>
                             </div>
 
-                            <div className="mb-8">
+                            {/* <div className="mb-8">
                                 <p className="text-gray-700 mb-2">Training Partner:</p>
                                 <div className="flex items-center">
                                     <Image
@@ -52,7 +52,7 @@ export default function CourseDetails({ course }: { course: Course }) {
                                         height={60}
                                     />
                                 </div>
-                            </div>
+                            </div> */}
 
                             <button className="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-md transition duration-300">
                                 Download Brochure

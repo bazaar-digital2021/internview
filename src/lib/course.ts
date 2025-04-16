@@ -2,8 +2,8 @@ export const courses = [
     {
         "title": "Data Science",
         "description": "Unlock the power of Multidisciplinary field that combines principles from mathematics.",
-        "duration": "6 months",
-        "modules": 12,
+        "duration": "2 months",
+        "modules": '15+',
         "mentor": ["Khan Shabaz", "Abhiraj Kulaar"],
         "rating": 4.9,
         "imgUrl": "/course/data-science.png"
@@ -11,8 +11,8 @@ export const courses = [
     {
         "title": "Web Development",
         "description": "Unlock your web development potential by mastering React, build dynamic websites, and launch your tech career today.",
-        "duration": "3 months",
-        "modules": 11,
+        "duration": "2 months",
+        "modules": '15+',
         "mentor": ["Khan Shabaz"],
         "rating": 4.8,
         "imgUrl": "/course/webdev.png"
@@ -20,8 +20,8 @@ export const courses = [
     {
         "title": "Digital Marketing",
         "description": "Get ready for marketing in the digital age & strategize for the Modern Businesses.",
-        "duration": "3 months",
-        "modules": 10,
+        "duration": "2 months",
+        "modules": '15+',
         "mentor": ["Aishvarya Karthikeyan"],
         "rating": 4.7,
         "imgUrl": "/course/dm.png"

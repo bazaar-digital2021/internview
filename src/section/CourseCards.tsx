@@ -59,7 +59,9 @@ const CourseCards = () => {
     };
 
     return (
-        <section ref={ref} className="py-10 md:py-14 bg-gradient-to-b from-primary/60 to-secondary/30 ">
+        <section ref={ref} className="py-10 md:py-14 bg-gradient-to-b from-primary/60 to-secondary/30 "
+            id='courses'
+        >
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

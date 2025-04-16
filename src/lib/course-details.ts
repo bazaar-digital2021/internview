@@ -8,10 +8,10 @@ export const courseDetails = [
         "slug": "android-development",
         "sign": "Android Developer",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "3-5",
-            "projects": "3",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -21,8 +21,8 @@ export const courseDetails = [
                 {
                     "time": "40+",
                     "test": "10+",
-                    "modules": "10+",
-                    "projects": "3+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -125,10 +125,10 @@ export const courseDetails = [
         "slug": "artificial-intelligence",
         "sign": "AI Engineer",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -138,8 +138,8 @@ export const courseDetails = [
                 {
                     "time": "45+",
                     "test": "12+",
-                    "modules": "12+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -236,10 +236,10 @@ export const courseDetails = [
         "slug": "machine-learning",
         "sign": "Machine Learning Engineer",
         "course_Stats": {
-            "duration": "3.5 Months",
+            "duration": "3.2 Months",
             "access": "365 Days",
             "credits": "4-5",
-            "projects": "3",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -249,8 +249,8 @@ export const courseDetails = [
                 {
                     "time": "42+",
                     "test": "11+",
-                    "modules": "10+",
-                    "projects": "3+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -349,10 +349,10 @@ export const courseDetails = [
         "slug": "cloud-computing-aws",
         "sign": "AWS Cloud Architect",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "3-5",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -362,8 +362,8 @@ export const courseDetails = [
                 {
                     "time": "38+",
                     "test": "9+",
-                    "modules": "11+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -476,10 +476,10 @@ export const courseDetails = [
         "slug": "cyber-security",
         "sign": "Cyber Security Specialist",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -489,8 +489,8 @@ export const courseDetails = [
                 {
                     "time": "45+",
                     "test": "12+",
-                    "modules": "12+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -604,10 +604,10 @@ export const courseDetails = [
         "slug": "data-science",
         "sign": "Data Scientist",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "5",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -617,8 +617,8 @@ export const courseDetails = [
                 {
                     "time": "48+",
                     "test": "12+",
-                    "modules": "12+",
-                    "projects": "5+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -731,10 +731,10 @@ export const courseDetails = [
         "slug": "java",
         "sign": "Java Developer",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "3-5",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -744,8 +744,8 @@ export const courseDetails = [
                 {
                     "time": "40+",
                     "test": "10+",
-                    "modules": "11+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -874,10 +874,10 @@ export const courseDetails = [
         "slug": "python",
         "sign": "Python Developer",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "3-5",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -887,8 +887,8 @@ export const courseDetails = [
                 {
                     "time": "38+",
                     "test": "10+",
-                    "modules": "10+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -1014,10 +1014,10 @@ export const courseDetails = [
         "slug": "web-development",
         "sign": "Web Developer",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "5",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1027,8 +1027,8 @@ export const courseDetails = [
                 {
                     "time": "45+",
                     "test": "12+",
-                    "modules": "12+",
-                    "projects": "5+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
 
             },
@@ -1151,10 +1151,10 @@ export const courseDetails = [
         "slug": "human-resources",
         "sign": "HR Specialist",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "180 Days",
             "credits": "3-5",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1163,8 +1163,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "30+",
                     "test": "8+",
-                    "modules": "10+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
             },
             "course_content": [
@@ -1224,10 +1224,10 @@ export const courseDetails = [
         "slug": "finance",
         "sign": "Finance Analyst",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "5",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1236,8 +1236,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "50+",
                     "test": "10+",
-                    "modules": "12+",
-                    "projects": "5+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
             },
             "course_content": [
@@ -1297,10 +1297,10 @@ export const courseDetails = [
         "slug": "sales-and-marketing",
         "sign": "Sales & Marketing Manager",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "180 Days",
             "credits": "3-5",
-            "projects": "4",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1309,8 +1309,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "35+",
                     "test": "9+",
-                    "modules": "11+",
-                    "projects": "4+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
             },
             "course_content": [
@@ -1361,10 +1361,10 @@ export const courseDetails = [
         "slug": "digital-marketing",
         "sign": "Digital Marketer",
         "course_Stats": {
-            "duration": "3 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "3-5",
-            "projects": "5",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1373,8 +1373,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "40+",
                     "test": "12+",
-                    "modules": "10+",
-                    "projects": "5+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
             },
             "course_content": [
@@ -1428,7 +1428,7 @@ export const courseDetails = [
             "duration": "2 Months",
             "access": "180 Days",
             "credits": "2-4",
-            "projects": "3",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1437,8 +1437,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "25+",
                     "test": "6+",
-                    "modules": "8+",
-                    "projects": "3+"
+                    "modules": "85",
+                    "projects": "2"
                 }
             },
             "course_content": [
@@ -1480,10 +1480,10 @@ export const courseDetails = [
         "slug": "industrial-biotechnology",
         "sign": "Biotech Engineer",
         "course_Stats": {
-            "duration": "4 Months",
+            "duration": "2 Months",
             "access": "365 Days",
             "credits": "4-6",
-            "projects": "5",
+            "projects": "2",
             "support": "1:1"
         },
         "details": {
@@ -1492,8 +1492,8 @@ export const courseDetails = [
                 "stats": {
                     "time": "45+",
                     "test": "10+",
-                    "modules": "12+",
-                    "projects": "5+"
+                    "modules": "15+",
+                    "projects": "2"
                 }
             },
             "course_content": [

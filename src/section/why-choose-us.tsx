@@ -32,7 +32,8 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section ref={ref} className="w-full py-20 bg-gradient-to-b bg-background">
+        <section ref={ref} className="w-full py-20 bg-gradient-to-b bg-background"
+            id='about'>
             <div className="w-full max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-[#1b335f] mb-4">

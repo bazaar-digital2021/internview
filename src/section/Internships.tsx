@@ -15,6 +15,7 @@ import {
     MapPin
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useRouter } from '@bprogress/next/app';
 
 const Internships = () => {
     const ref = useRef(null);
@@ -60,7 +61,7 @@ const Internships = () => {
             ],
             features: [
                 { icon: <Clock />, text: "15-20 hours per week" },
-                { icon: <Calendar />, text: "3-6 month duration" }
+                { icon: <Calendar />, text: "2-3 month duration" }
             ],
             accent: "bg-blue-50",
             accentBorder: "border-blue-200",
@@ -80,7 +81,7 @@ const Internships = () => {
             ],
             features: [
                 { icon: <Clock />, text: "20-30 hours per week" },
-                { icon: <Calendar />, text: "4-6 month duration" }
+                { icon: <Calendar />, text: "2-4 month duration" }
             ],
             accent: "bg-purple-50",
             accentBorder: "border-purple-200",
@@ -108,8 +109,12 @@ const Internships = () => {
         }
     ];
 
+    const router = useRouter();
+
     return (
-        <section ref={ref} className="py-24 bg-gradient-to-b from-primary/60 to-secondary/30">
+        <section ref={ref} className="py-24 bg-gradient-to-b from-primary/60 to-secondary/30"
+            id='internships'
+        >
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
@@ -130,7 +135,7 @@ const Internships = () => {
                     </motion.div>
 
                     <h2 className="text-2xl md:text-4xl font-bold  mb-4 font-mono">
-                        Internship Program <span className='bg-gradient-to-r from-purple-500 via-primary to-[#3660a3] bg-clip-text text-transparent'> Structure</span>
+                        Internship Program <span className='bg-gradient-to-r from-primary via-primary/80 to-purple-500 bg-clip-text text-transparent'> Structure</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Choose the internship format that aligns with your goals and circumstances.
@@ -240,7 +245,9 @@ const Internships = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            <Button className="bg-white text-[#1b335f] hover:bg-white/90 font-semibold py-3 px-6 text-lg rounded-xl whitespace-nowrap">
+                            <Button className="bg-white text-[#1b335f] hover:bg-white/90 font-semibold py-3 px-6 text-lg rounded-xl whitespace-nowrap"
+                                onClick={() => router.push('/contact-us')}
+                            >
                                 Apply Now
                             </Button>
                         </motion.div>

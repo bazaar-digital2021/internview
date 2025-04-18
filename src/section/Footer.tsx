@@ -59,10 +59,11 @@ const Footer = () => {
     // Footer links
     const quickLinks = [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "#about" },
+        { name: "About Us", href: "/about-us" },
         { name: "Courses", href: "#courses" },
         { name: "Internships", href: "#internships" },
         { name: "Mentors", href: "#mentors" },
+        { name: "Contact Us", href: "/contact-us" },
     ];
 
     const courses = [
@@ -76,6 +77,12 @@ const Footer = () => {
         { name: "Free Resources", href: "/resources" },
         { name: "Careers", href: "/careers" },
         { name: "FAQ", href: "/faq" },
+    ];
+
+    const terms = [
+        { name: "Terms and Conditions", href: "/terms-and-conditions" },
+        { name: "Privacy Policy", href: "/privacy-policy" },
+        { name: "Refund Policy", href: "/refund-policy" },
     ];
 
     // Social media links
@@ -168,6 +175,19 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+                        <h3 className="text-xl font-semibold mt-8 mb-6 flex items-center gap-2">
+                            <BookOpen className="w-5 h-5 text-[#3660a3]" />
+                            Policies
+                        </h3>
+                        <ul className="space-y-3">
+                            {terms.map((term, index) => (
+                                <li key={index}>
+                                    <Link href={term.href} className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm">
+                                        {term.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </motion.div>
 
                     {/* Courses */}
@@ -221,6 +241,7 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+
                     </motion.div>
 
                     {/* Newsletter */}

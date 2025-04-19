@@ -6,7 +6,8 @@ export const courses = [
         "modules": '15+',
         "mentor": ["Khan Shabaz", "Abhiraj Kulaar"],
         "rating": 4.9,
-        "imgUrl": "/course/data-science.png"
+        "imgUrl": "/course/data-science.png",
+        "href": '/courses/data-science'
     },
     {
         "title": "Web Development",
@@ -15,7 +16,8 @@ export const courses = [
         "modules": '15+',
         "mentor": ["Khan Shabaz"],
         "rating": 4.8,
-        "imgUrl": "/course/webdev.png"
+        "imgUrl": "/course/webdev.png",
+        "href": '/courses/web-development'
     },
     {
         "title": "Digital Marketing",
@@ -24,6 +26,7 @@ export const courses = [
         "modules": '15+',
         "mentor": ["Aishvarya Karthikeyan"],
         "rating": 4.7,
-        "imgUrl": "/course/dm.png"
+        "imgUrl": "/course/dm.png",
+        "href": '/courses/digital-marketing'
     }
 ]

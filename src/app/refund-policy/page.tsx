@@ -11,65 +11,55 @@ export default function RefundPolicy() {
                 </CardHeader>
                 <CardContent className="space-y-4 text-base">
                     <p>
-                        All fees paid for training, internships, and related services are non-refundable unless otherwise
-                        stated for specific programs.
+                        At Internview, we are dedicated to providing a high-quality learning and professional experience. We value your trust and strive to ensure your satisfaction. Please carefully review our refund policy below:
                     </p>
 
                     <h3 className="text-xl font-semibold mt-6 mb-2">Refund Eligibility</h3>
                     <p>
-                        Refunds are only applicable if:
-                    </p>
-                    <ul className="list-disc pl-6 space-y-2">
-                        <li>The Company fails to deliver the promised course or service.</li>
-                    </ul>
-
-                    <p>
-                        Eligible refunds will be processed within 14 business days of receiving a valid request. We may
-                        allow a transfer to another course at our discretion.
+                        All payments made for workshops and webinars are non-refundable.
                     </p>
 
-                    <h3 className="text-xl font-semibold mt-6 mb-2">Refund Request Process</h3>
+
                     <p>
-                        To request a refund, please follow these steps:
+                        We encourage participants to review all details carefully before registering, including schedules and course content.
                     </p>
+
+
                     <ol className="list-decimal pl-6 space-y-2">
-                        <li>Submit a written refund request to support@internview.com</li>
-                        <li>Include your full name, email address, and enrollment details</li>
-                        <li>Clearly state the reason for your refund request</li>
-                        <li>Provide any relevant documentation supporting your claim</li>
+                        <li>In the event of unforeseen circumstances, you may request to transfer your registration to a future session, subject to availability. A small administrative fee may apply.</li>
+                        <li>Courses and Training Programs:
+                            Refunds are not available once enrollment is confirmed.</li>
+                        <li>We strongly advise you to assess your availability and commitment before enrolling.</li>
+                        <li>However, you may request to defer your enrollment to a later batch or cohort. Approval will be subject to program availability and may involve a nominal transfer fee.</li>
+                        <li></li>
                     </ol>
 
-                    <h3 className="text-xl font-semibold mt-6 mb-2">Non-Refundable Items</h3>
+                    <h3 className="text-xl font-semibold mt-6 mb-2">Internships and Projects:</h3>
                     <p>
-                        The following items and circumstances are specifically excluded from our refund policy:
+                        Payments related to internships, live projects, or career services are non-refundable once the process has started
                     </p>
+                    <p>
+                        In case of any issues, we encourage you to reach out to our support team for possible alternative solutions or rescheduling options.
+                    </p>
+
+
+                    <h3 className="text-xl font-semibold mt-6 mb-2">Special Circumstances:</h3>
+
                     <ul className="list-disc pl-6 space-y-2">
-                        <li>Registration or application fees</li>
-                        <li>Enrollment fees once the program has started</li>
-                        <li>Digital materials that have been accessed or downloaded</li>
-                        <li>Cancellations after the program start date</li>
-                        <li>Requests based on change of mind or personal circumstances</li>
+                        <p>
+                            Refund requests due to serious emergencies (such as medical emergencies) will be considered on a case-by-case basis. Internview reserves the right to request appropriate documentation and to make the final decision regarding any exceptions.
+                        </p>
                     </ul>
 
-                    <h3 className="text-xl font-semibold mt-6 mb-2">Course Transfers</h3>
-                    <p>
-                        In certain circumstances, we may allow you to transfer your enrollment to:
-                    </p>
-                    <ul className="list-disc pl-6 space-y-2">
-                        <li>A different course of equal or lesser value</li>
-                        <li>A future session of the same course</li>
-                        <li>Another eligible student (subject to approval)</li>
-                    </ul>
+                    <h1>
+                        Contact Us:
 
+                    </h1>
                     <p className="mt-6">
-                        All transfer requests are evaluated on a case-by-case basis and are granted at the sole discretion of InternView.
-                        Transfer requests must be submitted at least 7 days before the original course start date.
+                        For any questions or concerns regarding our refund policy, please feel free to contact us at:
+                        📧 support@internview.in
                     </p>
 
-                    <p className="mt-6">
-                        We reserve the right to modify this refund policy at any time. Any changes will be effective immediately upon posting
-                        on our Platform. For questions regarding our refund policy, please contact support@internview.com.
-                    </p>
                 </CardContent>
             </Card>
         </div>

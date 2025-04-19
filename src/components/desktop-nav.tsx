@@ -113,8 +113,8 @@ function NavItemComponent({ item, index, isActive, setActiveIndex, isLast }: Nav
         >
             <button
                 className={`flex items-center text-start gap-1 px-4 py-2 text-sm font-medium rounded-md transition-all ${isActive
-                    ? "bg-primary text-white"
-                    : "text-white bg-primary hover:bg-primary hover:text-white/80"
+                    ? `${item.title === 'Courses' ? 'bg-primary text-primary' : 'bg-gray-300 text-primary'} `
+                    : ` ${item.title === 'Courses' ? 'bg-primary text-white' : 'bg-gray-300 text-primary'}  hover:bg-primary hover:text-primary`
                     }`}
                 onClick={handleClick}
             >

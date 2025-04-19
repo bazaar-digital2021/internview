@@ -183,22 +183,7 @@ const Upskill = () => {
                             </div>
 
                             {/* Action Button */}
-                            <div className="px-6 pb-6">
-                                <motion.div
-                                    whileHover={{ scale: 1.03 }}
-                                    whileTap={{ scale: 0.98 }}
-                                >
-                                    <Button
-                                        className="w-full py-6 font-medium text-base shadow-md"
-                                        style={{
-                                            background: `linear-gradient(90deg, ${feature.color} 0%, ${feature.id === 1 ? '#2d4a7a' : '#4b7abf'} 100%)`,
-                                            color: 'white'
-                                        }}
-                                    >
-                                        Learn More
-                                    </Button>
-                                </motion.div>
-                            </div>
+
                         </motion.div>
                     ))}
                 </motion.div>

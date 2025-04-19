@@ -214,15 +214,7 @@ const Internships = () => {
                             </div>
 
                             {/* Card Footer */}
-                            <div className="p-6 border-t border-gray-100">
-                                <motion.button
-                                    whileHover={{ scale: 1.03 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className={`w-full py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-medium transition-all ${internship.accent} ${internship.accentText}`}
-                                >
-                                    Learn More <ArrowRight className="w-4 h-4" />
-                                </motion.button>
-                            </div>
+
                         </motion.div>
                     ))}
                 </motion.div>

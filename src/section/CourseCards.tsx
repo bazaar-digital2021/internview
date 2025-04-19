@@ -18,13 +18,14 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useRouter } from '@bprogress/next/app';
 
 type CourseTitle = 'Data Science' | 'Web Development' | 'Digital Marketing' | 'Full Stack Development';
 
 const CourseCards = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false, amount: 0.2 });
-
+    const router = useRouter();
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -166,7 +167,9 @@ const CourseCards = () => {
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
-                                    <Button className="w-full bg-gradient-to-r from-[#1b335f] to-[#3660a3] hover:from-[#3660a3] hover:to-[#1b335f] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                                    <Button className="w-full bg-gradient-to-r from-[#1b335f] to-[#3660a3] hover:from-[#3660a3] hover:to-[#1b335f] text-white font-semibold py-3 rounded-lg transition-all duration-300"
+                                        onClick={() => router.push(`${course.href}`)}
+                                    >
                                         Apply Now
                                     </Button>
                                 </motion.div>

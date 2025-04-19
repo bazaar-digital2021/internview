@@ -5,6 +5,7 @@ import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "@bprogress/next/app"
 
 const pacifico = Pacifico({
     subsets: ["latin"],
@@ -99,8 +100,9 @@ export default function HeroGeometric({
             },
         }),
     }
-
+    const router = useRouter();
     return (
+
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-primary">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.8] via-transparent to-secondary/[0.9] blur-3xl" />
 
@@ -187,8 +189,12 @@ export default function HeroGeometric({
                     </motion.div>
                     <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
                         <ul className='flex gap-4 items-center justify-center'>
-                            <Button variant="outline" size='lg'>Join as a Company</Button>
-                            <Button size='lg'>Join as a Student</Button>
+                            <Button variant="outline" size='lg'
+                                onClick={() => router.push("/contact-us")}
+                            >Join as a Company</Button>
+                            <Button size='lg'
+                                onClick={() => router.push("/contact-us")}
+                            >Join as a Student</Button>
                         </ul>
                     </motion.div>
                 </div>

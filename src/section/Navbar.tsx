@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
 
                 <ul className='flex gap-4 items-center'>
-                    <Button onClick={() => router.push('/contact-us')}>Join as a Company</Button>
+                    <Button variant="outline" onClick={() => router.push('/contact-us')}>Join as a Company</Button>
                     <Button onClick={() => router.push('/contact-us')}>Join as a Student</Button>
                 </ul>
 

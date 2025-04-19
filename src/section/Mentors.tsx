@@ -150,24 +150,7 @@ const Mentors = () => {
                                 </div>
 
                                 {/* Social links */}
-                                <div className="absolute top-4 right-4 flex gap-2 z-20">
-                                    <motion.a
-                                        href={mentor.linkdin}
-                                        className="bg-white/10 p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-all"
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <LinkedinIcon className="w-4 h-4 text-primary" />
-                                    </motion.a>
-                                    <motion.a
-                                        href="#"
-                                        className="bg-white/20 p-2 rounded-full backdrop-blur-sm hover:bg-white/40 transition-all"
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <TwitterIcon className="w-4 h-4 text-white" />
-                                    </motion.a>
-                                </div>
+
                             </div>
 
                             {/* Mentor Details */}
@@ -202,37 +185,20 @@ const Mentors = () => {
                                 </p>
 
                                 {/* Action Button */}
-                                <motion.button
+                                <motion.a
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full py-3 px-4 rounded-xl flex items-center justify-center gap-2 font-medium transition-all bg-gradient-to-r from-[#1b335f] to-[#3660a3] text-white"
+                                    href={mentor.linkdin}
                                 >
                                     Connect with Mentor <StarIcon className="w-4 h-4" />
-                                </motion.button>
+                                </motion.a>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
 
-                {/* CTA Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.8, delay: 0.7 }}
-                    className="mt-20 text-center"
-                >
-                    <p className="text-gray-600 mb-6">
-                        Join our program and get personalized mentorship from industry leaders
-                    </p>
-                    <motion.a
-                        href="#"
-                        className="inline-block bg-[#1b335f] text-white py-3 px-8 rounded-full font-medium hover:bg-[#3660a3] transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        View All Mentors
-                    </motion.a>
-                </motion.div>
+
             </div>
         </section>
     );

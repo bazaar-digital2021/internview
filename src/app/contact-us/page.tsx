@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone, Send, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import ModernComingSoon from "@/components/coming-soon";
 
 export default function ContactUs() {
     return (
@@ -159,5 +160,6 @@ export default function ContactUs() {
                 </div>
             </div>
         </div>
+        // <ModernComingSoon />
     );
 }

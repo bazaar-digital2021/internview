@@ -8,6 +8,7 @@ import WhoShouldApply from "@/section/who-should-apply"
 import ProgramDetails from "./program-details"
 import Certification from "@/section/certification"
 import CourseFaq from "./course-faq"
+import ProgramFee from "./program-fee"
 
 
 export default function CourseDetails({ course }: { course: Course }) {
@@ -42,17 +43,7 @@ export default function CourseDetails({ course }: { course: Course }) {
                                 </div>
                             </div>
 
-                            {/* <div className="mb-8">
-                                <p className="text-gray-700 mb-2">Training Partner:</p>
-                                <div className="flex items-center">
-                                    <Image
-                                        src="/nsdc-logo.png"
-                                        alt="NSDC Logo"
-                                        width={150}
-                                        height={60}
-                                    />
-                                </div>
-                            </div> */}
+
 
                             <button className="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-md transition duration-300">
                                 Download Brochure
@@ -105,6 +96,7 @@ export default function CourseDetails({ course }: { course: Course }) {
             <WhoShouldApply />
 
             <ProgramDetails details={course.details} />
+            <ProgramFee courseTitle={course.title} />
             <Certification />
             <CourseFaq />
 

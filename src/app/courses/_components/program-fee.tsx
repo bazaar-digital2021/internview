@@ -136,12 +136,7 @@ export default function ProgramFee({ courseTitle }: ProgramFeeProps) {
                                         Enroll Now
                                     </Button>
 
-                                    <Button
-                                        variant="outline"
-                                        className={`w-full py-6 border-gray-200 text-gray-700 hover:bg-gray-50`}
-                                    >
-                                        <Download className="mr-2 h-4 w-4" /> Download Brochure
-                                    </Button>
+
                                 </div>
                             </div>
                         </motion.div>

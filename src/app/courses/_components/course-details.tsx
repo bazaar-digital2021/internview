@@ -9,9 +9,11 @@ import ProgramDetails from "./program-details"
 import Certification from "@/section/certification"
 import CourseFaq from "./course-faq"
 import ProgramFee from "./program-fee"
+import { useRouter } from "@bprogress/next/app"
 
 
 export default function CourseDetails({ course }: { course: Course }) {
+    const router = useRouter();
 
     return (
         <main>
@@ -45,8 +47,8 @@ export default function CourseDetails({ course }: { course: Course }) {
 
 
 
-                            <button className="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-md transition duration-300">
-                                Download Brochure
+                            <button onClick={() => router.push('/contact-us')} className="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-md transition duration-300">
+                                Apply Now
                             </button>
                         </div>
                     </div>

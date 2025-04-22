@@ -138,7 +138,7 @@ const Footer = () => {
                         <div className="flex items-center gap-3 pt-2">
                             {socialLinks.map((social, index) => (
                                 <motion.a
-                                    key={index}
+                                    key={social.name}
                                     href={social.href}
                                     className="bg-[#3660a3]/20 p-2 rounded-full hover:bg-[#3660a3]/50 transition-colors"
                                     whileHover={{ scale: 1.1 }}
@@ -164,7 +164,7 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3">
                             {quickLinks.map((link, index) => (
-                                <li key={index}>
+                                <li key={link.href}>
                                     <Link
                                         href={link.href}
                                         className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm"
@@ -181,7 +181,7 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3">
                             {terms.map((term, index) => (
-                                <li key={index}>
+                                <li key={term.name}>
                                     <Link href={term.href} className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm">
                                         {term.name}
                                     </Link>
@@ -204,12 +204,12 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <Accordion type="single" collapsible className="w-full">
                                 {navigation[0].items?.map((item, index) =>
-                                    <AccordionItem value={`item-${index}`}>
+                                    <AccordionItem value={`item-${index}`} key={item.title}>
                                         <AccordionTrigger>{item.title}</AccordionTrigger>
                                         <AccordionContent>
                                             <ul className='space-y-2'>
                                                 {item.items?.map((subItem, subIndex) => (
-                                                    <li key={subIndex}>
+                                                    <li key={subItem.title}>
                                                         <Link href={subItem.href || '#'} className='text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm'>
                                                             {subItem.title}
                                                         </Link>
@@ -230,7 +230,7 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3">
                             {resources.map((resource, index) => (
-                                <li key={index}>
+                                <li key={resource.name}>
                                     <Link
                                         href={resource.href}
                                         className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm"

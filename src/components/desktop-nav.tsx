@@ -29,7 +29,7 @@ export function DesktopNav({ items }: DesktopNavProps) {
         <div className="flex items-center justify-end w-full space-x-4">
             {items.map((item, index) => (
                 <NavItemComponent
-                    key={index}
+                    key={item.title || index + Date.now()}
                     item={item}
                     index={index}
                     isActive={activeIndex === index}
@@ -113,8 +113,8 @@ function NavItemComponent({ item, index, isActive, setActiveIndex, isLast }: Nav
         >
             <button
                 className={`flex items-center text-start gap-1 px-4 py-2 text-sm font-medium rounded-md transition-all ${isActive
-                    ? `${item.title === 'Courses' ? 'bg-primary text-primary' : 'bg-gray-300 text-primary'} `
-                    : ` ${item.title === 'Courses' ? 'bg-primary text-white' : 'bg-gray-300 text-primary'}  hover:bg-primary hover:text-primary`
+                    ? `${item.title === 'Courses' ? 'bg-primary text-white' : 'bg-gray-300 text-primary'} `
+                    : ` ${item.title === 'Courses' ? 'bg-primary text-white' : 'bg-gray-300 text-primary'} `
                     }`}
                 onClick={handleClick}
             >
@@ -139,7 +139,7 @@ function NavItemComponent({ item, index, isActive, setActiveIndex, isLast }: Nav
                     >
                         {item.items && item.items.map((subItem, i) => (
                             <DropdownItem
-                                key={i}
+                                key={subItem.title}
                                 item={subItem}
                                 depth={0}
                                 setParentIndex={setActiveIndex}
@@ -226,7 +226,7 @@ function DropdownItem({ item, depth = 0, setParentIndex, isLast }: DropdownItemP
                     >
                         {item.items && item.items.map((subItem, i) => (
                             <DropdownItem
-                                key={i}
+                                key={subItem.title}
                                 item={subItem}
                                 depth={depth + 1}
                                 setParentIndex={setParentIndex}

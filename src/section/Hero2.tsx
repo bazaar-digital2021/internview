@@ -1,15 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Pacifico } from "next/font/google"
+import localFont from "next/font/local"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "@bprogress/next/app"
 
-const pacifico = Pacifico({
-    subsets: ["latin"],
-    weight: ["400"],
+const pacifico = localFont({
+    src: "../fonts/Pacifico-Regular.woff2",
+    weight: "400",
     variable: "--font-pacifico",
 })
 

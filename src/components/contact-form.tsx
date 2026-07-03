@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
@@ -6,10 +6,6 @@ import { Button } from './ui/button'
 
 
 import { Textarea } from './ui/textarea'
-
-interface ContactDetails {
-
-}
 
 interface ContactFormProps {
     open: boolean

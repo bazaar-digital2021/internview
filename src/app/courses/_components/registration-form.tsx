@@ -56,7 +56,7 @@ export default function CourseRegistrationForm({ title }: { title: string }) {
                     </svg>
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Registration Successful!</h2>
-                <p className="text-gray-600 mb-6">Thank you for your interest. We'll contact you shortly with more details.</p>
+                <p className="text-gray-600 mb-6">Thank you for your interest. We&apos;ll contact you shortly with more details.</p>
                 <button
                     onClick={() => setSubmitted(false)}
                     className="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded-md transition duration-300"

@@ -106,11 +106,11 @@ export default function ModernComingSoon() {
                             Coming Soon
                         </h1>
                         <p className="text-xl mb-12 text-gray-300">
-                            We're crafting something extraordinary. Stay tuned!
+                            We&apos;re crafting something extraordinary. Stay tuned!
                         </p>
                         <Countdown
                             date={Date.now() + 30 * 24 * 60 * 60 * 1000}
-                            renderer={({ days, hours, minutes, seconds, completed }) => (
+                            renderer={({ days, hours, minutes, seconds }) => (
                                 <div className="flex justify-center space-x-4 mb-12">
                                     {[
                                         { label: 'Days', value: days },

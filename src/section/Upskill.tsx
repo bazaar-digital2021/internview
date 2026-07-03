@@ -4,7 +4,6 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Video, Users, BookOpen, Award, Clock, BadgeCheck, PlayCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const Upskill = () => {
     const ref = useRef(null);

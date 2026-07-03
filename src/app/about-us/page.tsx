@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import {
-    Users, Award, BookOpen, Rocket,
+    Users, Award, Rocket,
     Target, Heart, Lightbulb, GraduationCap,
     Globe, TrendingUp, CheckCircle2, ArrowRight
 } from 'lucide-react';
@@ -17,15 +17,11 @@ export default function AboutUs() {
     const missionRef = useRef(null);
     const visionRef = useRef(null);
     const valuesRef = useRef(null);
-    const teamRef = useRef(null);
-    const journeyRef = useRef(null);
 
     // Check if sections are in view
     const missionInView = useInView(missionRef, { once: false, amount: 0.3 });
     const visionInView = useInView(visionRef, { once: false, amount: 0.3 });
     const valuesInView = useInView(valuesRef, { once: false, amount: 0.3 });
-    const teamInView = useInView(teamRef, { once: false, amount: 0.3 });
-    const journeyInView = useInView(journeyRef, { once: false, amount: 0.3 });
 
     // Animation variants
     const fadeIn = {
@@ -51,33 +47,6 @@ export default function AboutUs() {
         }
     };
 
-    const teamMembers = [
-        {
-            name: "Rahul Sharma",
-            role: "Founder & CEO",
-            image: "/placeholder-person.jpg",
-            bio: "10+ years experience in education technology and career mentorship."
-        },
-        {
-            name: "Priya Patel",
-            role: "Head of Curriculum",
-            image: "/student-collab.jpg",
-            bio: "EdTech specialist with a passion for creating engaging learning experiences."
-        },
-        {
-            name: "Amit Kumar",
-            role: "Career Placement Director",
-            image: "/placeholder-person.jpg",
-            bio: "Helped 200+ students secure internships at leading companies."
-        },
-        {
-            name: "Sneha Reddy",
-            role: "Industry Relations Manager",
-            image: "/placeholder-person.jpg",
-            bio: "Building partnerships with India's top tech companies and startups."
-        }
-    ];
-
     const values = [
         {
             icon: <Heart className="w-6 h-6 text-pink-500" />,
@@ -98,29 +67,6 @@ export default function AboutUs() {
             icon: <Target className="w-6 h-6 text-red-500" />,
             title: "Excellence",
             description: "We hold ourselves to the highest standards in education and mentorship."
-        }
-    ];
-
-    const milestones = [
-        {
-            year: "2020",
-            title: "Founded in Bangalore",
-            description: "Started with our first batch of 25 students for web development internship."
-        },
-        {
-            year: "2021",
-            title: "Expanded Course Offerings",
-            description: "Added data science and digital marketing to our curriculum."
-        },
-        {
-            year: "2022",
-            title: "100+ Industry Partnerships",
-            description: "Established connections with leading companies for placements."
-        },
-        {
-            year: "2023",
-            title: "1000+ Student Success Stories",
-            description: "Celebrated our milestone of helping 1000+ students launch their careers."
         }
     ];
 
@@ -164,7 +110,7 @@ export default function AboutUs() {
                             About <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white to-white">InternView</span>
                         </h1>
                         <p className="text-lg md:text-xl text-white/80 mb-8">
-                            We're bridging the gap between education and employment, empowering students
+                            We&apos;re bridging the gap between education and employment, empowering students
                             to build successful careers through hands-on experience and expert mentorship.
                         </p>
 
@@ -205,7 +151,7 @@ export default function AboutUs() {
                         <motion.div custom={1} variants={fadeIn} className="w-20 h-1 bg-[#3660a3] mb-6 rounded-full"></motion.div>
 
                         <motion.p custom={2} variants={fadeIn} className="text-lg text-gray-700 mb-6">
-                            At InternView, we're on a mission to transform how students transition from education to employment
+                            At InternView, we&apos;re on a mission to transform how students transition from education to employment
                             by providing industry-relevant training, real-world internship experiences, and expert mentorship.
                         </motion.p>
 

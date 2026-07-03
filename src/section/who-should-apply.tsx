@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { CheckCheckIcon, CheckCircle, CheckCircleIcon } from 'lucide-react'
+import { CheckCircle, CheckCircleIcon } from 'lucide-react'
 
 export default function WhoShouldApply() {
     // Animation variants

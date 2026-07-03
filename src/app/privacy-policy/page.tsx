@@ -89,12 +89,12 @@ export default function PrivacyPolicy() {
                             <p className="text-lg mb-4">
                                 Welcome to Internview, operated by Upskill and Earn Solution Pvt Ltd, a company registered
                                 under the Companies Act, 2013, having its registered office at 79/24, 13th Cross, Teachers Colony,
-                                Koramangala, Bengaluru, Karnataka, India (hereinafter referred to as the "Company", "we", "our" or "us").
+                                Koramangala, Bengaluru, Karnataka, India (hereinafter referred to as the &quot;Company&quot;, &quot;we&quot;, &quot;our&quot; or &quot;us&quot;).
                             </p>
                             <p className="text-lg mb-4">
                                 We value your trust and are committed to protecting and respecting your privacy. This Privacy Policy
                                 explains how we collect, use, disclose, and safeguard your information when you visit our website
-                                https://www.internview.in ("Platform") and use our services related to industrial training, internships,
+                                https://www.internview.in (&quot;Platform&quot;) and use our services related to industrial training, internships,
                                 and placement opportunities.
                             </p>
                             <p className="text-lg">

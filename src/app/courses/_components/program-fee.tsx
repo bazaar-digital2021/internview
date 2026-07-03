@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
+import { CheckCircle2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 type ProgramFeeProps = {

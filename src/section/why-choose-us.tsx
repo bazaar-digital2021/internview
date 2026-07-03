@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
           </h2>
           <div className="w-20 h-1 bg-[#3660a3] mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Seize the future: Secure your career with InternView's cutting-edge
+            Seize the future: Secure your career with InternView&apos;s cutting-edge
             resources and transformative learning experiences.
           </p>
         </div>

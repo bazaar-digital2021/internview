@@ -184,7 +184,7 @@ export default function HeroGeometric({
 
                     <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                            Empowering students with real-world skills, mentorship, and expert-led training to thrive in today's job market.
+                            Empowering students with real-world skills, mentorship, and expert-led training to thrive in today&apos;s job market.
                         </p>
                     </motion.div>
                     <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">

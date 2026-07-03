@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { LinkedinIcon, GithubIcon, TwitterIcon, BriefcaseIcon, GraduationCapIcon, AwardIcon, StarIcon } from 'lucide-react';
+import { BriefcaseIcon, GraduationCapIcon, StarIcon } from 'lucide-react';
 
 const Mentors = () => {
     const ref = useRef(null);

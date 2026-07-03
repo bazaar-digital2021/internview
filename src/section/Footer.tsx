@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
     Accordion,
@@ -31,31 +30,6 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
     const router = useRouter();
 
-    // Animation variants
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                duration: 0.4
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 12
-            }
-        }
-    };
-
     // Footer links
     const quickLinks = [
         { name: "Home", href: "/" },
@@ -64,12 +38,6 @@ const Footer = () => {
         { name: "Internships", href: "#internships" },
         { name: "Mentors", href: "#mentors" },
         { name: "Contact Us", href: "/contact-us" },
-    ];
-
-    const courses = [
-        { name: "Data Science", href: "/courses/data-science" },
-        { name: "Web Development", href: "/courses/web-development" },
-        { name: "Digital Marketing", href: "/courses/digital-marketing" },
     ];
 
     const resources = [
@@ -118,7 +86,7 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-[#3660a3] mt-1 flex-shrink-0" />
-                                <p className="text-white/80 text-sm">79/24, 2nd Floor, 13th Cross, Teacher's Colony, Jakkasandra, Koramangala Bangalore 560034.</p>
+                                <p className="text-white/80 text-sm">79/24, 2nd Floor, 13th Cross, Teacher&apos;s Colony, Jakkasandra, Koramangala Bangalore 560034.</p>
                             </div>
                             <div className="flex items-start gap-3">
                                 <Mail className="w-5 h-5 text-[#3660a3] mt-0.5 flex-shrink-0" />
@@ -136,7 +104,7 @@ const Footer = () => {
 
                         {/* Social Media Links */}
                         <div className="flex items-center gap-3 pt-2">
-                            {socialLinks.map((social, index) => (
+                            {socialLinks.map((social) => (
                                 <motion.a
                                     key={social.name}
                                     href={social.href}
@@ -163,7 +131,7 @@ const Footer = () => {
                             Quick Links
                         </h3>
                         <ul className="space-y-3">
-                            {quickLinks.map((link, index) => (
+                            {quickLinks.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
@@ -180,7 +148,7 @@ const Footer = () => {
                             Policies
                         </h3>
                         <ul className="space-y-3">
-                            {terms.map((term, index) => (
+                            {terms.map((term) => (
                                 <li key={term.name}>
                                     <Link href={term.href} className="text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm">
                                         {term.name}
@@ -208,7 +176,7 @@ const Footer = () => {
                                         <AccordionTrigger>{item.title}</AccordionTrigger>
                                         <AccordionContent>
                                             <ul className='space-y-2'>
-                                                {item.items?.map((subItem, subIndex) => (
+                                                {item.items?.map((subItem) => (
                                                     <li key={subItem.title}>
                                                         <Link href={subItem.href || '#'} className='text-white/80 hover:text-white transition-colors flex items-center gap-2 group text-sm'>
                                                             {subItem.title}
@@ -229,7 +197,7 @@ const Footer = () => {
                             Resources
                         </h3>
                         <ul className="space-y-3">
-                            {resources.map((resource, index) => (
+                            {resources.map((resource) => (
                                 <li key={resource.name}>
                                     <Link
                                         href={resource.href}

@@ -49,7 +49,7 @@ interface NavItemComponentProps {
     isLast: boolean;
 }
 
-function NavItemComponent({ item, index, isActive, setActiveIndex, isLast }: NavItemComponentProps) {
+function NavItemComponent({ item, index, isActive, setActiveIndex }: NavItemComponentProps) {
     const ref = useRef<HTMLDivElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const [dropdownPosition, setDropdownPosition] = useState<'left' | 'center' | 'right'>('center');
@@ -160,7 +160,7 @@ interface DropdownItemProps {
     isLast: boolean;
 }
 
-function DropdownItem({ item, depth = 0, setParentIndex, isLast }: DropdownItemProps) {
+function DropdownItem({ item, depth = 0, setParentIndex }: DropdownItemProps) {
     const [open, setOpen] = useState(false)
     const itemRef = useRef<HTMLDivElement>(null)
 

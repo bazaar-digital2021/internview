@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone, Send, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
-import ModernComingSoon from "@/components/coming-soon";
 
 export default function ContactUs() {
     return (
@@ -73,7 +72,7 @@ export default function ContactUs() {
                                 <div>
                                     <h3 className="font-semibold text-lg">Our Location</h3>
                                     <p className="text-muted-foreground">
-                                        79/24, 2nd Floor, 13th Cross, Teacher's Colony, Jakkasandra, Koramangala Bangalore 560034.
+                                        79/24, 2nd Floor, 13th Cross, Teacher&apos;s Colony, Jakkasandra, Koramangala Bangalore 560034.
                                     </p>
                                 </div>
                             </div>

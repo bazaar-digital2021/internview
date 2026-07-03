@@ -92,8 +92,8 @@ export default function TermsAndConditions() {
                     <Card className="mb-8 shadow-md border-0">
                         <CardContent className="p-8">
                             <p className="text-lg mb-4">
-                                Welcome to InternView (the "Platform"), operated by Upskill and Earn Solution Pvt Ltd
-                                ("Company", "we", "us", or "our"). Please read these Terms and Conditions ("Terms") carefully
+                                Welcome to InternView (the &quot;Platform&quot;), operated by Upskill and Earn Solution Pvt Ltd
+                                (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). Please read these Terms and Conditions (&quot;Terms&quot;) carefully
                                 before using the Platform, as they govern your access to and use of the Platform and services
                                 offered through it.
                             </p>

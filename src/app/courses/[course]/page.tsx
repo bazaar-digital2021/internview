@@ -2,7 +2,7 @@ import ModernComingSoon from "@/components/coming-soon";
 import CourseDetails from "../_components/course-details";
 import { courseDetails } from "@/lib/course-details";
 
-export default async function CoursePage({ params }: { params: { course: string } }) {
+export default async function CoursePage({ params }: { params: Promise<{ course: string }> }) {
     const { course } = await params;
     const courseInfo = courseDetails.find((item) => item.slug === course);
 

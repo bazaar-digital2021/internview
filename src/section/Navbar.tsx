@@ -3,13 +3,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { navigation } from "@/lib/navigation"
 
 
-import { Menu, X } from "lucide-react"
+import { Menu } from "lucide-react"
 import { DesktopNav } from "@/components/desktop-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { useRouter } from "@bprogress/next/app"

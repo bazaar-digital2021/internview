@@ -7,12 +7,8 @@ import {
     Building2,
     UsersRound,
     Clock,
-    ArrowRight,
     Calendar,
-    GraduationCap,
     Briefcase,
-    GanttChartSquare,
-    MapPin
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from '@bprogress/next/app';
@@ -152,7 +148,7 @@ const Internships = () => {
                     animate={isInView ? "visible" : "hidden"}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
-                    {internshipTypes.map((internship, index) => (
+                    {internshipTypes.map((internship) => (
                         <motion.div
                             key={internship.id}
                             variants={itemVariants}

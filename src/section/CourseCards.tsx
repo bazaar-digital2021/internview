@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useState, useRef, ReactElement } from 'react';
+import React, { useRef, ReactElement } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { courses } from '@/lib/course';
 import {
     GraduationCap,
     BookOpen,
-    Award,
     Briefcase,
     Clock,
     Star,
@@ -17,7 +16,6 @@ import {
     Sparkles
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { useRouter } from '@bprogress/next/app';
 
 type CourseTitle = 'Data Science' | 'Web Development' | 'Digital Marketing' | 'Full Stack Development';

@@ -58,7 +58,7 @@ const FindCourseForMe = ({
                                         </>
                                     ) : (
                                         <>
-                                            <span className='text-primary'>I'm a {course.type}</span> looking for {course.target}
+                                            <span className='text-primary'>I&apos;m a {course.type}</span> looking for {course.target}
                                         </>
                                     )}
                                 </h2>

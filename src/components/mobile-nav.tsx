@@ -35,7 +35,7 @@ interface MobileNavItemProps {
     isLast?: boolean
 }
 
-function MobileNavItem({ item, setOpen, depth = 0, isLast = false }: MobileNavItemProps) {
+function MobileNavItem({ item, setOpen, depth = 0 }: MobileNavItemProps) {
     const [expanded, setExpanded] = useState(false)
 
     const toggleExpanded = (e: React.MouseEvent) => {

@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import {
     Carousel,
@@ -11,7 +11,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from 'next/image';
-import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay'
 
 const codingChallenges = [

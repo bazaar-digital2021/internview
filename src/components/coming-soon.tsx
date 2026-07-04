@@ -1,96 +1,23 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Particles, ParticlesProvider } from "@tsparticles/react";
-import type { Engine } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";
 import Countdown from "react-countdown";
 
 import ContactForm from "@/components/contact-form";
 
 export default function ModernComingSoon() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
-  }, []);
-
   const [open, setOpen] = useState(false);
 
   return (
-    <ParticlesProvider init={particlesInit}>
+    <>
       <ContactForm open={open} setOpen={setOpen} />
-      <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white overflow-hidden">
-        <Particles
-          id="tsparticles"
-          options={{
-            background: {
-              color: {
-                value: "transparent",
-              },
-            },
-            fpsLimit: 120,
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 4,
-                },
-                repulse: {
-                  distance: 200,
-                  duration: 0.4,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#ffffff",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: false,
-                speed: 1,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                },
-                value: 80,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 5 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+      <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white overflow-hidden relative">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[15%] left-[10%] w-64 h-64 rounded-full bg-pink-500/20 blur-3xl animate-pulse" />
+          <div className="absolute bottom-[10%] right-[10%] w-72 h-72 rounded-full bg-indigo-400/20 blur-3xl animate-pulse [animation-delay:1s]" />
+          <div className="absolute top-[45%] right-[25%] w-48 h-48 rounded-full bg-purple-400/20 blur-3xl animate-pulse [animation-delay:2s]" />
+        </div>
         <div className="relative  w-full max-w-4xl px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -171,6 +98,6 @@ export default function ModernComingSoon() {
           © 2025 InternView All rights reserved.
         </div>
       </div>
-    </ParticlesProvider>
+    </>
   );
 }
